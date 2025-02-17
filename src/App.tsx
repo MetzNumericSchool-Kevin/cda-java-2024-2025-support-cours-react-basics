@@ -1,10 +1,10 @@
 import "./App.css";
-import ComposantAvecPropriete from "./notions/ComposantAvecPropriete";
-import EcouteurEvenement from "./notions/EcouteurEvenement";
-import GestionEtat from "./notions/GestionEtat";
 // Pour pouvoir utiliser un composant, il faut importer le composant
 // import <NomComposant> from <chemin_du_fichier_du_composant>;
-import PremierComposant from "./notions/PremierComposant";
+import PremierComposant from "./notions/01_PremierComposant";
+import ComposantAvecPropriete from "./notions/02_ComposantAvecPropriete";
+import EcouteurEvenement from "./notions/03_EcouteurEvenement";
+import GestionEtat from "./notions/04_GestionEtat";
 
 // Extension de fichier React .jsx
 // Extension de fichier React + TypeScript .tsx
@@ -13,7 +13,7 @@ import PremierComposant from "./notions/PremierComposant";
 // on déclare une fonction, que l'on nomme ici "App"
 // Et qui retourne du HTML
 //
-// Ce mélange JavaScript + HTML est appelé JSX 
+// Ce mélange JavaScript + HTML est appelé JSX
 // C'est la syntaxe de REACT
 //
 //
@@ -44,7 +44,7 @@ function App() {
           marque: "Renault",
           modele: "Clio",
           couleur: "Bleu",
-          annee: 2000
+          annee: 2000,
         }}
         // Ce type de fonction est appelé aussi fonction de rappel (callback)
         // C'est une mécanisme qui est très souvent utilisé dans le monde de JavaScript
@@ -68,7 +68,7 @@ const voiture = {
   marque: "Renault",
   modele: "Clio",
   couleur: "Bleu",
-  annee: 2000
-}
+  annee: 2000,
+};
 
 export default App;

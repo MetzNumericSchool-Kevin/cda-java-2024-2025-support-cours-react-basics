@@ -1,7 +1,5 @@
 function PremierComposant() {
-    return (
-        <h1>Premier composant</h1>
-    )
+  return <h1>Premier composant</h1>;
 }
 
 // Je dois exporter le composant, avec le mot-clé export
