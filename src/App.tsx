@@ -4,7 +4,7 @@ import "./App.css";
 import PremierComposant from "./notions/01_PremierComposant";
 import ComposantAvecPropriete from "./notions/02_ComposantAvecPropriete";
 import EcouteurEvenement from "./notions/03_EcouteurEvenement";
-import GestionEtat from "./notions/04_GestionEtat";
+import GestionEtat from "./notions/__Gestion_Etat";
 
 // Extension de fichier React .jsx
 // Extension de fichier React + TypeScript .tsx

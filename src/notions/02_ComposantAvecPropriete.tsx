@@ -7,30 +7,29 @@
 //
 // Le nommage du paramètre "props" est arbitraire
 function ComposantAvecPropriete(props) {
+  // console.log(props);
 
-    // console.log(props);
+  // props est un objet (correspont éventuellement aux dictionnaires en Java)
+  // On accède à une propriété d'un objet avec la notation pointé (.)
+  // console.log(props.text);
 
-    // props est un objet (correspont éventuellement aux dictionnaires en Java)
-    // On accède à une propriété d'un objet avec la notation pointé (.)
-    // console.log(props.text);
+  // Dans le cas où une propriété de props contient une fonction
+  // Je peux exécuter cette fonction
+  //
+  // Cette mécanique me permet nottament de transmettre des informations
+  // à au composant parent qui l'utilise
+  props.fonctionDeSalutation("Jean");
 
-    // Dans le cas où une propriété de props contient une fonction
-    // Je peux exécuter cette fonction
-    //
-    // Cette mécanique me permet nottament de transmettre des informations
-    // à au composant parent qui l'utilise
-    props.fonctionDeSalutation("Jean");
-
-    return (
-        <>
-            <h1>Composant avec propriété</h1>
-            <p>
-                {/* Pour afficher une variable ou constante dans mon template HTML */}
-                {/* J'utilise également la des crochets {} */}
-                {props.text}
-            </p>
-        </>
-    )
+  return (
+    <>
+      <h1>Composant avec propriété</h1>
+      <p>
+        {/* Pour afficher une variable ou constante dans mon template HTML */}
+        {/* J'utilise également la des crochets {} */}
+        {props.text}
+      </p>
+    </>
+  );
 }
 
 export default ComposantAvecPropriete;
