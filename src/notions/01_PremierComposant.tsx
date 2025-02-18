@@ -1,6 +1,6 @@
 // Un composant est une fonction JavaScript
 //
-// Le nom du composant doit commencer par une lettre Majuscule
+// Le nom du composant React doit commencer par une lettre Majuscule
 //
 function PremierComposant() {
   return <h1>Premier composant</h1>;

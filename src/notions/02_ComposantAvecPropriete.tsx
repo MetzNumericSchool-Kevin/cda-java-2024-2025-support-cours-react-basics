@@ -1,6 +1,5 @@
-// Mon composant peut recevoir des paramètres,
-// Pour afficher plusieurs choses différentes,
-// En fonction de ce que me passe un composant parent
+// Mon composant peut recevoir des propriétés,
+// Permettant d'avoir un rendu en fonction de ce que me passe un composant parent
 //
 // Je peux accéder à text1 et text2, depuis mon composant,
 // En utilisant le paramètre props
@@ -16,16 +15,16 @@ function ComposantAvecPropriete(props) {
   // Dans le cas où une propriété de props contient une fonction
   // Je peux exécuter cette fonction
   //
-  // Cette mécanique me permet nottament de transmettre des informations
-  // à au composant parent qui l'utilise
+  // Cette mécanique me permet nottament de transmettre des informations au composant parent qui l'utilise
   props.fonctionDeSalutation("Jean");
 
   return (
     <>
       <h1>Composant avec propriété</h1>
       <p>
-        {/* Pour afficher une variable ou constante dans mon template HTML */}
-        {/* J'utilise également la des crochets {} */}
+        {/* Pour afficher une variable ou constante dans mon template JSX */}
+        {/* J'utilise également ici des crochets {} */}
+        {/* Les crochets permettent d'éxécuter n'importe quelle expression JavaScript valide */}
         {props.text}
       </p>
     </>
