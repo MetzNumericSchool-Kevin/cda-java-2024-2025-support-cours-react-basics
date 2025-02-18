@@ -3,7 +3,7 @@ import "./App.css";
 // import <NomComposant> from <chemin_du_fichier_du_composant>;
 import PremierComposant from "./notions/01_PremierComposant";
 import ComposantAvecPropriete from "./notions/02_ComposantAvecPropriete";
-import EcouteurEvenement from "./notions/03_EcouteurEvenement";
+import EcouteurEvenement from "./notions/__EcouteurEvenement";
 import GestionEtat from "./notions/__GestionEtat";
 
 // Extension de fichier React .jsx
