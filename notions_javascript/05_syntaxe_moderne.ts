@@ -86,6 +86,13 @@ const second = tuple[1];
 // qu'il n'y a d'éléments dans le tableau
 const [firstB, secondB] = tuple;
 
+// Vous pouvez aussi choisir quelle clés du tableau vous souhaitez récupérer
+const vegetables = ["carrot", "potato", "cucumber", "onion"];
+// Ici, l'indice 0 et l'indice 2 serons ignorés
+const [, potato, , onion] = vegetables;
+// Ou encore choisir arbitrairement les indices
+const { [2]: cucumber, [1]: carrot } = vegetables;
+
 // Ceci marche aussi pour les objets
 const person = {
   firstname: "John",
@@ -93,6 +100,11 @@ const person = {
   age: 30,
   greet() {
     console.log(`Hello, my name is ${this.name}`);
+  },
+  metier: {
+    nom: "Developpeur Web",
+    entreprise: "Acme Corp",
+    skills: ["HTML", "CSS", "JS"],
   },
 };
 
@@ -107,6 +119,17 @@ const { firstname, age, greet, name: anotherNameVar } = person;
 
 console.log(firstname, anotherNameVar);
 greet();
+
+// On peut destructurer des éléments plus en profondeur dans l'objet
+// Que ce soit des objets ou des tableaux
+const {
+  metier: {
+    entreprise,
+    skills: [firstSkill],
+  },
+} = person;
+
+console.log(entreprise, firstSkill); // Affichera "Acme Corp" et "HTML"
 
 // On peut faire cette décomposition pour les paramètres d'une fonctions
 
@@ -178,7 +201,8 @@ sommeDeNombres(1, 2, 3, 4, 5); // Résultat 15
  * Opérateur de dispersion (spread)
  */
 
-// Il est possible de "diffuser" le contenu d'objets ou de tableaux avec l'opérateur de diffusion ... (oui le même que l'opérateur de reste)
+// Il est possible de "disperser" le contenu d'objets ou de tableaux
+// dans de nouveaux objets ou tableaux avec l'opérateur de diffusion ... (oui le même que l'opérateur de reste)
 
 // Par exemple, dans la manipulation des tableaux, je vous ai montré une façon pour faire une copie dans un nouveau tableau :
 const users = ["userA", "userB", "userC"];
@@ -245,7 +269,7 @@ const getCoordinates2 = () => {
 };
 
 /**
- * Objets Shorthand syntax
+ * Object shorthand syntax
  */
 
 // Imaginons que je souhaites créer un objet à partir de variables, dont les noms sont les mêmes
