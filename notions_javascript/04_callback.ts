@@ -1,3 +1,6 @@
+// C'est un fichier .ts juste pour m'aider à écrire le code sans erreur.
+// Ce code est du code JavaScript valide.
+
 // Les callbacks, ou fonctions de rappels
 // Sont une mécanique très, très, utilisé en JavaScript
 
