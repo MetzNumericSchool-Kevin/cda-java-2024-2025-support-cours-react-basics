@@ -13,6 +13,10 @@ if (unNombre > 0) {
   // a est égal à 0
 }
 
+/**
+ * Opérateur ternaire
+ */
+
 // Il existe une version raccourcie d'une condition if avec l'opérateur ternaire
 
 // Avant le ? c'est la condition (comme si on pose une question)
@@ -30,6 +34,9 @@ const typeOfNumber2 =
 // Il faut savoir que dès qu'une expression avec un &&, si l'expression de gauche vaut false, il n'évaluera pas la deuxième expression
 // (Pas la peine car l'expression complète est fausse à partir de la première expression falsy)
 
+/**
+ * Conditionnel avec les opérateurs logiques && et ||
+ */
 const isLoggedIn = true;
 isLoggedIn && console.log("User is logged in"); // Affichera "User is logged in" si isLoggedIn vaut true, sinon il ne fera rien
 
