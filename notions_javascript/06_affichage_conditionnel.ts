@@ -36,6 +36,9 @@ const typeOfNumber2 =
 
 /**
  * Conditionnel avec les opérateurs logiques && et ||
+ *
+ * https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Operators/Logical_AND
+ * https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Operators/Logical_OR
  */
 const isLoggedIn = true;
 isLoggedIn && console.log("User is logged in"); // Affichera "User is logged in" si isLoggedIn vaut true, sinon il ne fera rien
