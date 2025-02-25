@@ -228,7 +228,7 @@ const newAnimal = Object.assign({}, animal, {
   gender: "female",
 });
 
-console.log(newAnimal); // Affichera { name: "Yoli", color: "white", age: 5, type: "lion", gender: "female" }
+console.log(newAnimal); // Affichera { name: "Liyo", color: "brown", age: 5, type: "cat", gender: "female" }
 
 // Avec l'opérateur de dispersion, nous pouvons faire la même chose de la façon suivante :
 const newAnimal2 = { ...animal, name: "Yoli", color: "white" };
