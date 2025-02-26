@@ -30,5 +30,4 @@
 
   - https://fr.react.dev/learn/sharing-state-between-components
 
-- Contextes pour partager des données entre composants
-  - https://fr.react.dev/learn/passing-data-deeply-with-context
+- Gestion des éléments de formulaire
