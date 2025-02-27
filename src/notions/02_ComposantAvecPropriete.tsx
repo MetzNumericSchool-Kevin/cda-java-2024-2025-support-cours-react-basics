@@ -6,7 +6,7 @@
 //
 // Le nommage du paramètre "props" est arbitraire
 function ComposantAvecPropriete(props) {
-  // console.log(props);
+  console.log(props);
 
   // props est un objet (correspont éventuellement aux dictionnaires en Java)
   // On accède à une propriété d'un objet avec la notation pointé (.)

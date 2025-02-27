@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 function EcouteurEvenement() {
   // event est un objet (javascript) représentant l'évènement qui a été capturé
   function onButtonClicked(event) {
@@ -27,6 +29,56 @@ function EcouteurEvenement() {
       </button>
     </form>
   );
+}
+
+export function AddPokemonForm({ onPokemonAdded }) {
+  const [pokemon, setPokemon] = useState({
+    name: "",
+    type: "",
+  });
+
+  // Exemple de fonction permettant de mettre
+  // Dynamiquement à jour une clé de l'objet
+  function updateField(key, value) {
+    setPokemon({
+      ...pokemon,
+      // Key ici est dynamique et dépendra du contexte,
+      // Dans notre exemple, key sera soit name, type
+      [key]: value,
+    })
+  }
+
+  return (
+    <>
+      <form onSubmit={(event) => {
+        event.preventDefault();
+        onPokemonAdded(pokemon);
+      }}>
+        {/* event est l'objet qui représente un évènement */}
+        {/* event.target représente le noeud HTML qui est responsable de l'évènement */}
+        {/* event.target.value représante la valeur du noeud HTML dans le cas des éléments de formulaire */}
+        <input onChange={(event) => updateField('name', event.target.value)} type="text" name="name" />
+        <br />
+        <br />
+        <select onChange={(event) => updateField('type', event.target.value)}>
+          <option value=""></option>
+          <option value="electrique">Electrique</option>
+          <option value="eau">Eau</option>
+          <option value="vol">Vol</option>
+          <option value="feu">Feu</option>
+        </select>
+        <br />
+        <br />
+        <button type="submit">Ajouter le Pokemon</button>
+      </form>
+
+      <br />
+
+      Nom du Pokemon : {pokemon.name}
+      <br />
+      Type du Pokemon : {pokemon.type}
+    </>
+  )
 }
 
 export default EcouteurEvenement;
